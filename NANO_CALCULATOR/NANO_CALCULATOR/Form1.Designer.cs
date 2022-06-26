@@ -426,7 +426,7 @@ namespace NANO_CALCULATOR
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "NANO_CALCULATOR";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
