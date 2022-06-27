@@ -278,6 +278,7 @@ namespace NANO_CALCULATOR
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 36;
+            this.label1.Text = "0";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // button17
@@ -390,6 +391,7 @@ namespace NANO_CALCULATOR
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(82, 23);
             this.textBox1.TabIndex = 35;
+            this.textBox1.Text = "0";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // Form1

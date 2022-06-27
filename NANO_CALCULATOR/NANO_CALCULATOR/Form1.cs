@@ -23,26 +23,21 @@ namespace NANO_CALCULATOR
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-         
         }
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -141,7 +136,12 @@ namespace NANO_CALCULATOR
 
         private void button16_Click(object sender, EventArgs e)
         {
-            calculate();
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "0";
+            }  
+            double c = float.Parse(textBox1.Text);
+            calculate(op,a,c);
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -204,42 +204,42 @@ namespace NANO_CALCULATOR
             sign = true;
         }
 
-        private void calculate()
+        public string calculate(int op, double a, double c)
         {
             switch (op)
             {
                 case 1:
-                    b = a + float.Parse(textBox1.Text);
+                    b = a + c;
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 2:
-                    b = a - float.Parse(textBox1.Text);
+                    b = a - c;
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 3:
-                    b = a * float.Parse(textBox1.Text);
+                    b = a * c;
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 4:
-                    b = a / float.Parse(textBox1.Text);
+                    b = a / c;
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 5:
                     a *= (Math.PI / 180.0);
                     b = Math.Sin(a);
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 6:
                     a *= (Math.PI / 180.0);
                     b = Math.Cos(a);
                     textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 case 7:
                         b = Math.Log(a);
                         textBox2.Text = b.ToString();
-                    break;
+                    return b.ToString();
                 default:
-                    break;
+                    return "0";
             }
         }
     }
